@@ -3,9 +3,9 @@
 <body>
 
 <?php
-$servername = "mydatabase.cvt14csgq4ea.ap-south-1.rds.amazonaws.com";
-$username = "priya";
-$password = "priya1234";
+$servername = "database-1.cxvrj3wim5hk.ap-south-1.rds.amazonaws.com";
+$username = "abhijeet";
+$password = "abhijeet";
 $dbname = "studentdb";
 
 // Create connection
