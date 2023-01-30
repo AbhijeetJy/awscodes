@@ -1,0 +1,10 @@
+sudo su
+yum install mysql
+
+sudo -i
+
+mysql -u abhijeet  -p -h sqldatabase.cxvrj3wim5hk.ap-south-1.rds.amazonaws.com -P 3306
+
+use studentdb;
+
+select * from login;
