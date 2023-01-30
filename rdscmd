@@ -3,8 +3,8 @@ yum install mysql
 
 sudo -i
 
-mysql -u abhijeet  -p -h sqldatabase.cxvrj3wim5hk.ap-south-1.rds.amazonaws.com -P 3306
+mysql -u abhijeet  -p -h database-1.cxvrj3wim5hk.ap-south-1.rds.amazonaws.com -P 3306
 
-use studentdb;
+use sys;
 
 select * from login;
