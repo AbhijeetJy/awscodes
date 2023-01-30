@@ -1,0 +1,28 @@
+sudo -i
+
+yum install httpd
+
+service httpd start
+
+yum install php php-mysql
+
+service httpd restart
+________________________
+
+
+cd /var/www/html
+
+vim test.php
+
+_________________________
+
+<?php
+
+echo “Hello World”;
+
+?>
+
+Esc + :wq (To escape from the editor)
+________________________
+
+url: public DNS/test.php
