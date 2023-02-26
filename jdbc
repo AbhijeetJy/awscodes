@@ -1,3 +1,4 @@
+// download package from this link and add it to eclispe -project--buildpath--confbuildpath--library-addexternal jar (https://dev.mysql.com/downloads/connector/j/)
 //schema sys(Default),tablename- user, colmname - user(varchar50) pass(varchar50)
 //keep package name same as project name
 package jdbc;
