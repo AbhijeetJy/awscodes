@@ -14,6 +14,15 @@ cd /var/www/html
 
 vim test.php
 
+sudo yum install -y amazon-linux-extras
+ 
+sudo amazon-linux-extras disable php7.4
+sudo amazon-linux-extras disable php7.3
+sudo amazon-linux-extras enable php7.2
+sudo yum install php php-{pear,cgi,common,curl,mbstring,gd,mysqlnd,gettext,bcmath,json,xml,fpm,intl,zip,imap}
+sudo systemctl restart httpd
+php -v
+
 _________________________
 
 <?php
