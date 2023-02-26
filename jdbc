@@ -1,0 +1,48 @@
+//schema sys(Default),tablename- user, colmname - user(varchar50) pass(varchar50)
+//keep package name same as project name
+package jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import java.sql.*;
+
+public class connector {
+    public static void main(String arg[])
+    {
+        Connection connection = null;
+        try {
+            // below two lines are used for connectivity.
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //change the database url till portno only ony change this dbtraik.cxvrj3wim5hk.ap-south-1.rds.amazonaws.com
+            connection = DriverManager.getConnection(
+                "jdbc:mysql://dbtraik.cxvrj3wim5hk.ap-south-1.rds.amazonaws.com:3306/sys",
+                "abhijeet", "abhijeet");
+//            database-jdbc.cxvrj3wim5hk.ap-south-1.rds.amazonaws.com
+ 
+            // mydb is database
+            // mydbuser is name of database
+            // mydbuser is password of database
+ 
+            Statement statement;
+            statement = connection.createStatement();
+            ResultSet resultSet;
+            resultSet = statement.executeQuery(
+                "Select * from user");
+            String user;
+            String pass;
+            while (resultSet.next()) {
+                user = resultSet.getString("user");
+                pass = resultSet.getString("pass").trim();
+                System.out.println("user : " + user
+                                   + " pass : " + pass);
+            }
+            resultSet.close();
+            statement.close();
+            connection.close();
+        }
+        catch (Exception exception) {
+            System.out.println(exception);
+        }
+    } // function ends
+} // class ends
